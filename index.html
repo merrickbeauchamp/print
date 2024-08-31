@@ -5,13 +5,17 @@
 <body>
 
 <h1>Enter your school email:</h1>
-<form>
+<form onsubmit="validateEmail()">
 <input id="email" type="email" >
 <input type="submit" value="Submit">
 </form>
   
 </body>
   <script>
-    
+    let email = document.getElementById("email")
+    function validateEmail() {
+      if(!email.value.endsWith("@online.houstonisd.org")) return alert("Must use school email.")
+      alert(email.value)
+    }
   </script>
 </html>
